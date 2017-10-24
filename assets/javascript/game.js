@@ -7,45 +7,39 @@ let wins = 0;
 let losses = 0;
 let counter = 0;
 let magicNumber = 0;
-let userNumber;
-let cardValues = [0, 0, 0, 0];
 
 // Function to Generate a Random Number between 19-120 for the MagicNumber
 
 var magicNumberGenerator = function() {
 	magicNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
-	console.log(magicNumber);
+	// console.log(magicNumber);
 	$('#magic-number').text(magicNumber);
 };
 
 
 // Function to Generate a Random Number betweent 1-12 for each Cards assigned value
 var cardValueRandomNumberGenerator = function() {
-	card1Value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-	card2Value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-	card3Value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-	card4Value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-	console.log(card1Value, card2Value, card3Value, card4Value);
-	// $('#card-1').value = cardValue;
-	// for (var i = 0; i < 4; i++) {
-	// 	cardValues.push(this.cardValue)
-	// 	// $('#card-1').value = cardValue;
-	// }
-	// console.log(cardValues);
+	for (var i = 1; i < 5; i++) {
+		$('#card-'+[i]).val( Math.floor(Math.random() * (12 - 1 + 1)) + 1 );
+	}
+	// card1Value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+	// card2Value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+	// card3Value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+	// card4Value = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+	// console.log(card1Value, card2Value, card3Value, card4Value);
+
 }
 
-// let assignValuesToCards = function() {
-// 	for (var i = 0; i < 4; i++) {
-// 		cardValueRandomNumberGenerator();
-// 	}
-// }
 
 
 
 // On Click function for each card
 
-$('#card-1').on('click', function() {
-	counter += card2Value;
+$('.card').on('click', function() {
+	var cardValue = this.value;
+	cardValue = Number(cardValue);
+	// console.log(cardValue);
+	counter += cardValue;
 	$('#user-number').text(counter);
 	if (counter === magicNumber) {
 		alertWin();
@@ -54,35 +48,47 @@ $('#card-1').on('click', function() {
 	}
 });
 
-$('#card-2').on('click', function() {
-	counter += card2Value;
-	$('#user-number').text(counter);
-	if (counter === magicNumber) {
-		alertWin();
-	} else if ( counter >= magicNumber ) {
-		alertLoss();
-	}
-});
+// $('#card-1').on('click', function() {
+// 	counter += card2Value;
+// 	$('#user-number').text(counter);
+// 	if (counter === magicNumber) {
+// 		alertWin();
+// 	} else if ( counter >= magicNumber ) {
+// 		alertLoss();
+// 	}
+// });
 
-$('#card-3').on('click', function() {
-	counter += card3Value;
-	$('#user-number').text(counter);
-	if (counter === magicNumber) {
-		alertWin();
-	} else if ( counter >= magicNumber ) {
-		alertLoss();
-	}
-});
+// $('#card-2').on('click', function() {
+// 	counter += card2Value;
+// 	$('#user-number').text(counter);
+// 	if (counter === magicNumber) {
+// 		alertWin();
+// 	} else if ( counter >= magicNumber ) {
+// 		alertLoss();
+// 	}
+// });
 
-$('#card-4').on('click', function() {
-	counter += card4Value;
-	$('#user-number').text(counter);
-	if (counter === magicNumber) {
-		alertWin();
-	} else if ( counter >= magicNumber ) {
-		alertLoss();
-	}
-});
+// $('#card-3').on('click', function() {
+// 	counter += card3Value;
+// 	$('#user-number').text(counter);
+// 	if (counter === magicNumber) {
+// 		alertWin();
+// 	} else if ( counter >= magicNumber ) {
+// 		alertLoss();
+// 	}
+// });
+
+// $('#card-4').on('click', function() {
+// 	counter += card4Value;
+// 	$('#user-number').text(counter);
+// 	if (counter === magicNumber) {
+// 		alertWin();
+// 	} else if ( counter >= magicNumber ) {
+// 		alertLoss();
+// 	}
+// });
+
+// Alerts
 
 var alertWin = function() {
 	alert("You Win!");
@@ -105,6 +111,8 @@ var resetGame = function() {
 	cardValueRandomNumberGenerator();
 };
 
+// Update The Stats
+
 var updateStats = function() {
 	var statsHtml = 
 		"<ul>" +
@@ -116,8 +124,7 @@ var updateStats = function() {
 		
 };
 
-
-
+// On Page Load
 window.onload = function() {
 	resetGame();
 	updateStats();
