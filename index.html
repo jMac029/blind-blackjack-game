@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Blind Blackjack</title>
+
+		<meta name="viewport" content="width=device-width" initial-scale=1.0">
+
+		<!-- Link to Reset CSS to Zero out browsers default CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+		<!-- Link to CSS Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+		<!-- Link to jQuery CDN -->
+		<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+
+			<div class="container">
+
+				<div class="header">
+					<h1>BLIND BLACK JACK</h1>
+				</div>
+
+
+				<div class="rules">
+						<h2>HOW TO PLAY</h2>
+						<p>A random number is assigned to each round of play</p>
+						<p>
+							There are four cards below. Click each card to add a specific amount of points to your total score.
+						</p>
+						<p>
+							Win the round by matching your total score to the random number without going over.
+						</p>
+						<p>
+							The value of each card is hidden and is reassigned in each round of play.
+						</p>
+						<p>
+							Good Luck! and may the odds forever be in your favor!
+						</p>
+				</div>
+
+				<div class="stats">
+					<ul>
+						<li>
+							<p>Wins: </p> 
+						</li>
+						<li>
+							<p>Losses: </p>
+						</li>
+					</ul>
+				</div>
+
+				<div class="game-area">
+
+					<div id="random-number">
+						<h2>This Rounds Magic Number</h2>
+						
+					</div>
+
+					<div id="user-cards">
+
+						<h2>Your Playing Cards</h2>
+
+						<img id="card-1" value="" src="assets/images/playing_card_1.png">
+						<img id="card-2" value="" src="assets/images/playing_card_2.png">
+						<img id="card-3" value="" src="assets/images/playing_card_3.png">
+						<img id="card-4" value="" src="assets/images/playing_card_4.png">
+						
+					</div>
+
+					<div id="user-score">
+						<h2>Your Current Score</h2>
+						
+					</div>
+					
+				</div>
+
+				<div class="clear"></div>
+
+				<div class="footer">
+					<p>&copy; James McMillan 2017</p>
+				</div>
+
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="assets/javascript/game.js"></script>
+	</body>
+</html>
