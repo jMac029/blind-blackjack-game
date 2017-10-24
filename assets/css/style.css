@@ -134,7 +134,15 @@ section {
 #random-number {
   width: 50%;
   margin: auto;
+  float: left;
   border: dashed 5px blue;
+}
+
+#user-score {
+  width: 50%;
+  margin: auto;
+  float: left;
+  border: dashed 5px purple;
 }
 
 #magic-number {
@@ -149,12 +157,6 @@ section {
 
 #user-cards img {
   width: 20%;
-}
-
-#user-score {
-  width: 50%;
-  margin: auto;
-  border: dashed 5px purple;
 }
 
 .clear {
