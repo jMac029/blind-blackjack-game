@@ -18,7 +18,6 @@ var magicNumberGenerator = function() {
 	$('#magic-number').text(magicNumber);
 };
 
-magicNumberGenerator();
 
 // Function to Generate a Random Number betweent 1-12 for each Cards assigned value
 var cardValueRandomNumberGenerator = function() {
@@ -41,7 +40,7 @@ var cardValueRandomNumberGenerator = function() {
 // 	}
 // }
 
-cardValueRandomNumberGenerator();
+
 
 // On Click function for each card
 
@@ -117,5 +116,10 @@ var updateStats = function() {
 		
 };
 
-updateStats();
+
+
+window.onload = function() {
+	resetGame();
+	updateStats();
+};
 
