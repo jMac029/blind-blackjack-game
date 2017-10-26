@@ -92,14 +92,6 @@ p {
   font-size: 1em;
 }
 
-section {
-  display: block;
-  float: left;
-  width: 495px;
-  height: 267px;
-  overflow: hidden;
-}
-
 .rules {
   margin: 25px auto;
   text-align: center;
