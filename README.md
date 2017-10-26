@@ -1,6 +1,8 @@
 # blind-blackjack-game
 4th Homework Assignment for UCI Coding Bootcamp - Recommended Option
 
+see the end results here: https://jmac029.github.io/blind-blackjack-game/
+
 # Instructions
 1. The player will have to guess the answer, just like in Hangman. This time, though, the player will guess with numbers instead of  letters.
 
